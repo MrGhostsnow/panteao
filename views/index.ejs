@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <%- include('./partials/header.ejs') %>
+
+    <main>
+      <section id="cards">
+        <% panteao.forEach((gods,id) => { %>
+          <a href="/detalhes/<%= gods.id %>">
+          <div class="card">
+            <div id="topo">
+              <p id="num"><%= gods.id %></p>
+              <h3><%= gods.nome %></h3>
+            </div>
+            <img id="img" src="<%= gods.imagem %>" alt="" />
+            <a id="editar" href="/getById/<%= gods.id %>/put">Editar</a>
+            <a id="apagar" href="/getById/<%= gods.id %>/delete %>">Apagar</a>
+          </div>
+        </a>
+        <% }) %>
+      </section>
+    </main>
+    <% if (godsPut != null) {%>
+      <%- include('./partials/modalPut.ejs')%>  <% } %>
+    <% if (godsDel != null) {%>
+        <%- include('./partials/modalDel') %>
+    <% } %>
+
+    <%- include('./partials/footer.ejs') %>
+  </body>
+</html>

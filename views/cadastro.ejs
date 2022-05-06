@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <%- include('./partials/header.ejs') %>
+    <% if(message != "") {%>
+      <%- include('./partials/alert.ejs') %>
+    <% } %>
+    <h2 id="cadastro">Cadastrar novo Deus(a)</h2>
+    <section id="cadastro">
+     
+
+      <picture>
+        <img src="https://viagemeturismo.abril.com.br/wp-content/uploads/2016/10/453127565.jpeg?quality=70&strip=info&w=925?quality=70&strip=info&w=636" alt="">
+          <div>
+            <form action="/create" method="post">
+              <fieldset>
+                <label for="nome">Nome:</label>
+                <input
+                  type="text"
+                  name="nome"
+                  id="nome"
+                  onchange="validarCampos()"
+                  placeholder="Nome"
+                  required
+                />
+              </fieldset>
+              <fieldset>
+                <label for="descricao">Descricao:</label>
+                <input
+                  type="text"
+                  name="descricao"
+                  id="descricao"
+                  onchange="validarCampos()"
+                  placeholder="Descricao"
+                  required
+                />
+              </fieldset>
+              <fieldset>
+                <label for="cultura">Cultura:</label>
+                <input
+                  type="text"
+                  name="cultura"
+                  id="cultura"
+                  onchange="validarCampos()"
+                  placeholder="cultura"
+                  required
+                />
+              </fieldset>
+              <fieldset>
+                <label for="dominio">Domínio:</label>
+                <input
+                  type="text"
+                  name="dominio"
+                  id="dominio"
+                  onchange="validarCampos()"
+                  placeholder="Domínio"
+                  required
+                />
+              </fieldset>
+              <fieldset>
+                <label for="instrumento">Instrumento:</label>
+                <input
+                  type="text"
+                  name="instrumento"
+                  id="instrumento"
+                  onchange="validarCampos()"
+                  placeholder="Instrumento"
+                  required
+                />
+              </fieldset>
+              <fieldset>
+                <label for="imagem">Link da Imagem:</label>
+                <input
+                  type="text"
+                  name="imagem"
+                  id="imagem"
+                  onchange="validarCampos()"
+                  placeholder="Link da Imagem"
+                  required
+                />
+              </fieldset>
+              <button id="btnCadastrar" type="submit" disabled="true">
+                Cadastrar
+              </button>
+            </form>
+          </div>
+              </section>
+        </img>
+      </picture>
+      </footer>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+  <%- include('./partials/footer.ejs') %>
+</html>

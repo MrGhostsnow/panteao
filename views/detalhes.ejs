@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
+</head>
+<body class="details">
+  <%- include('./partials/header.ejs') %>
+    <main>   
+      <section class="detalhes">
+        <p id="num"><%= gods.id %></p>
+                <h3><%= gods.nome %></h3>
+              </div>
+              <img id="img" src="<%= gods.imagem %>" alt="" /><p id="cultura">Cultura: <%= gods.cultura %></p>
+              <p class="descricao">Descrição: <%= gods.descricao %></p>
+              <p>Domínio: <%= gods.dominio %></p>
+              <p>Instrumento: <%= gods.instrumento %></p>
+      </section>
+    </main>
+    <script src="/public/script.js"></script>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>
+
