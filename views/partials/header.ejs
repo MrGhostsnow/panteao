@@ -18,12 +18,8 @@
           <li><a href="/cadastro">Cadastro</a></li>
           <li><a href="/#cards">Deuses</a></li>
           <li><section class="search">
-            <form action="/search" method="post">
-                <input type="text" name="gods" placeholder="Nome do Deus(a)">
-                <button type="submit"><i class="bi bi-search"></i></button>
-            </form>
-        </section></li>
         </ul>
+        <%- include('./search.ejs') %>
     </nav>
   </body>
 </html>

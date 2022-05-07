@@ -43,3 +43,14 @@ const Gods = connection.define('gods', {
 );
 
 module.exports = Gods;
+
+const initTable = async () => {
+    try {
+        await Gods.sync()
+    }
+    catch(error){
+        return error.message
+    }
+}
+
+initTable() 

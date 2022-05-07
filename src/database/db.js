@@ -1,14 +1,17 @@
 const Sequelize = require('sequelize');
 const Gods = require('../models/Gods')
 const connection = new Sequelize(
-    process.env.DB_BASE,
-    process.env.DB_USER,
-    process.env.DB_PASS,
-    {
-        host: process.env.DB_HOST,
-        port: 5432,
-        dialect: "postgres",
-    }
+'postgres://panteao_user:rGJrCc2Ktl2gTbLv93Cub1EjoWnphvVs@dpg-c9rbedr97ej5m8i84130-a.oregon-postgres.render.com/panteao',
+ {
+
+dialect: 'postgres',
+dialectOptions: {
+  ssl: {
+    rejectUnauthorized: false,
+    require: true
+}
+}}
 );
 
 module.exports = connection;
+

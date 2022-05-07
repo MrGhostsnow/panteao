@@ -3,7 +3,7 @@ var nome = document.getElementById("nome");
 var descricao = document.getElementById("descricao");
 var cultura = document.getElementById("cultura");
 var dominio = document.getElementById("dominio");
-var instrumento = document.getElementById("instrumento");
+;
 var img = document.getElementById("imagem");
 
 const closeAlert = () => {
@@ -26,7 +26,6 @@ function validarCampos() {
       descricao.value == "" ||
       cultura.value == "" ||
       dominio.value == "" ||
-      instrumento.value == "" ||
       img.value == ""
     ) {
       bot.disabled = true;
@@ -34,3 +33,6 @@ function validarCampos() {
       bot.disabled = false;
     }
   }
+
+
+  
